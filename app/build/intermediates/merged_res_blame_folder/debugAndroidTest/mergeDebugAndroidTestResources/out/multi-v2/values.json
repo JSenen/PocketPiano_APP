@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.espressif.wifi_provisioning.test.app-mergeDebugAndroidTestResources-3:/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,11",
+                        "startColumns": "0,0",
+                        "startOffsets": "176,544",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "543,909"
+                    },
+                    "to": {
+                        "startLines": "6,13",
+                        "startColumns": "4,4",
+                        "startOffsets": "367,739",
+                        "endLines": "12,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "734,1104"
+                    }
+                },
+                {
+                    "source": "/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/generated/res/resValues/androidTest/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8,10,12",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "156,276,395,515",
+                        "endColumns": "77,76,77,78",
+                        "endOffsets": "229,348,468,589"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,133,210,288",
+                        "endColumns": "77,76,77,78",
+                        "endOffsets": "128,205,283,362"
+                    }
+                }
+            ]
+        }
+    ]
+}

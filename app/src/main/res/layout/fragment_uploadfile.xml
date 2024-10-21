@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".UploadFileFragment">
+
+    <LinearLayout
+        android:id="@+id/connectionStatusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/connectionStatusIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_disconnected" />
+
+        <TextView
+            android:id="@+id/connectionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disconnected_from_device"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#414141"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/no_file_selected"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connectionStatusLayout"
+        android:fontFamily="@font/roboto"
+        android:textColor="#414141"/>
+
+    <Button
+        android:id="@+id/butStartOTA"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="166dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="240dp"
+        android:backgroundTint="@color/buttonBackgroundColor"
+        android:fontFamily="@font/roboto"
+        android:text="@string/select_file"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/buttonBackgroundColor" />
+
+    <FrameLayout
+        android:layout_width="200dp"
+    android:layout_height="200dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textCode">
+
+    <!-- ProgressBar circular -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:indeterminate="false"
+    android:progressDrawable="@drawable/custom_progress_bar"
+    android:max="100"
+    android:progress="0"
+    android:visibility="gone" />
+
+    <!-- Texto de progreso centrado dentro del ProgressBar -->
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="0%"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/imgCheckOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ota_ok_svg"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+</FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

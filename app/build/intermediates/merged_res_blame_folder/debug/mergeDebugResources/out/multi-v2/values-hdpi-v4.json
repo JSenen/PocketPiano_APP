@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.espressif.wifi_provisioning.app-mergeDebugResources-34:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/res/values-hdpi/dimens.xml",
+                    "from": {
+                        "startLines": "7,5,2,3,4,1,6",
+                        "startColumns": "1,1,1,1,1,1,1",
+                        "startOffsets": "246,169,53,92,131,13,208",
+                        "endColumns": "38,38,38,38,37,39,37",
+                        "endOffsets": "283,206,90,129,167,51,244"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,97,139,181,223,264,307",
+                        "endColumns": "41,41,41,41,40,42,40",
+                        "endOffsets": "92,134,176,218,259,302,343"
+                    }
+                },
+                {
+                    "source": "/Users/JSenen/.gradle/caches/transforms-4/5c51f9569857dd67e71ecb4cae944eab/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "348",
+                        "endLines": "13",
+                        "endColumns": "13",
+                        "endOffsets": "620"
+                    }
+                }
+            ]
+        }
+    ]
+}

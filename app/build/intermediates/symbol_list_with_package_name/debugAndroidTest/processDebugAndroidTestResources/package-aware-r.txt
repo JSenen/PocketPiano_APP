@@ -1,0 +1,7 @@
+com.espressif.wifi_provisioning.test
+string ble_device_name_prefix
+string proof_of_possesion
+string wifi_base_url
+string wifi_device_name_prefix
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

@@ -2,25 +2,113 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" /> <!-- Request legacy Bluetooth permissions on older devices. -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PocketPIano_APP"
-        tools:targetApi="31">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <!-- Declaración del servicio debe ir aquí -->
+        <service
+            android:name="com.espressif.BluetoothLeService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Otras actividades y servicios pueden estar aquí -->
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name="com.espressif.DeviceControlActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.espressif.SplashScreen"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.espressif.ui.activities.EspMainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.espressif.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.espressif.ui.activities.AddDeviceActivity"
+            android:label="@string/title_activity_provision_landing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.BLEProvisionLanding"
+            android:label="@string/title_activity_connect_device"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.WiFiConfigActivity"
+            android:label="@string/title_activity_wifi_config"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.ProvisionLanding"
+            android:label="@string/title_activity_provision_landing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.ProvisionActivity"
+            android:label="@string/title_activity_provisioning"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.WiFiScanActivity"
+            android:label="@string/title_activity_wifi_scan_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.ThreadConfigActivity"
+            android:label="@string/title_activity_wifi_scan_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.espressif.ui.activities.ProofOfPossessionActivity"
+            android:label="@string/title_activity_pop"
+            android:screenOrientation="portrait" />
     </application>
+
 
 </manifest>

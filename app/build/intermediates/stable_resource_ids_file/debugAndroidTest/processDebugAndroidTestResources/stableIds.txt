@@ -1,0 +1,6 @@
+com.espressif.wifi_provisioning.test:style/WhiteBackgroundTheme = 0x7f020001
+com.espressif.wifi_provisioning.test:string/wifi_device_name_prefix = 0x7f010003
+com.espressif.wifi_provisioning.test:string/wifi_base_url = 0x7f010002
+com.espressif.wifi_provisioning.test:style/WhiteBackgroundDialogTheme = 0x7f020000
+com.espressif.wifi_provisioning.test:string/proof_of_possesion = 0x7f010001
+com.espressif.wifi_provisioning.test:string/ble_device_name_prefix = 0x7f010000

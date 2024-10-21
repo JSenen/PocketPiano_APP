@@ -1,9 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.PocketPIano_APP" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+<resources>
 
-    <style name="Theme.PocketPIano_APP" parent="Base.Theme.PocketPIano_APP" />
+    <style name="ThemeOverlay.SimpleBluetoothLeTerminalmaster2.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/color_dark_gray</item>
+    </style>
 </resources>

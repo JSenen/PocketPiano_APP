@@ -1,0 +1,2 @@
+D com/espressif/provisioning/CameraSource$FlashMode
+D com/espressif/provisioning/CameraSource$FocusMode

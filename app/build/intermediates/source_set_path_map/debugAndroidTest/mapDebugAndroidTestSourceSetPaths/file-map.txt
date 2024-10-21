@@ -1,0 +1,6 @@
+com.espressif.wifi_provisioning.test.app-core-1.5.0-0 /Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res
+com.espressif.wifi_provisioning.test.app-annotation-experimental-1.4.0-1 /Users/JSenen/.gradle/caches/transforms-4/fc6015aeb0b310da9b53ae92388aaad6/transformed/annotation-experimental-1.4.0/res
+com.espressif.wifi_provisioning.test.app-androidTest-2 /Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/generated/res/resValues/androidTest/debug
+com.espressif.wifi_provisioning.test.app-mergeDebugAndroidTestResources-3 /Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.espressif.wifi_provisioning.test.app-mergeDebugAndroidTestResources-4 /Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.espressif.wifi_provisioning.test.app-debugAndroidTest-5 /Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

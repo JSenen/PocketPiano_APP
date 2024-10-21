@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.espressif.wifi_provisioning.app-mergeDebugResources-34:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "from": {
+                        "startLines": "7,5,2,3,4,1,6",
+                        "startColumns": "1,1,1,1,1,1,1",
+                        "startOffsets": "249,171,53,93,133,13,211",
+                        "endColumns": "38,39,39,39,37,39,37",
+                        "endOffsets": "286,209,91,131,169,51,247"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,97,140,183,226,267,310",
+                        "endColumns": "41,42,42,42,40,42,40",
+                        "endOffsets": "92,135,178,221,262,305,346"
+                    }
+                }
+            ]
+        }
+    ]
+}

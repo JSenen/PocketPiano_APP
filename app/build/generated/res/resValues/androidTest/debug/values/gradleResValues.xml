@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Value from build type: debug -->
+    <string name="ble_device_name_prefix" translatable="false">PROV_</string>
+    <!-- Value from build type: debug -->
+    <string name="proof_of_possesion" translatable="false">AcupetAP</string>
+    <!-- Value from build type: debug -->
+    <string name="wifi_base_url" translatable="false">192.168.4.1:80</string>
+    <!-- Value from build type: debug -->
+    <string name="wifi_device_name_prefix" translatable="false">PROV_</string>
+
+</resources>

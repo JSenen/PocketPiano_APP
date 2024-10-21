@@ -1,0 +1,26 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo de la ProgressBar con borde -->
+    <item>
+        <shape android:shape="ring"
+            android:innerRadiusRatio="3"
+            android:thicknessRatio="10"
+            android:useLevel="false"> <!-- Fondo no animado -->
+            <solid android:color="@color/greyprogessbar" />
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/black" />
+        </shape>
+    </item>
+
+    <!-- Progreso de la ProgressBar sin animación -->
+    <item android:id="@android:id/progress">
+        <shape android:shape="ring"
+            android:innerRadiusRatio="3"
+            android:thicknessRatio="10"
+            android:useLevel="true"> <!-- Uso del nivel para el progreso -->
+            <solid android:color="@color/colorPrimary" />
+        </shape>
+    </item>
+
+</layer-list>

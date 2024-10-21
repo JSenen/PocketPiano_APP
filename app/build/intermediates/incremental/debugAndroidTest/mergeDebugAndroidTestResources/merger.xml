@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.4.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/.gradle/caches/transforms-4/fc6015aeb0b310da9b53ae92388aaad6/transformed/annotation-experimental-1.4.0/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.4.0" from-dependency="true" generated-set="androidx.annotation:annotation-experimental:1.4.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/.gradle/caches/transforms-4/fc6015aeb0b310da9b53ae92388aaad6/transformed/annotation-experimental-1.4.0/res"><file path="/Users/JSenen/.gradle/caches/transforms-4/fc6015aeb0b310da9b53ae92388aaad6/transformed/annotation-experimental-1.4.0/res/values/values.xml" qualifiers=""/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.test:core:1.5.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.test:core:1.5.0" from-dependency="true" generated-set="androidx.test:core:1.5.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res"><file path="/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res/values-v28/values.xml" qualifiers="v28"><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Material.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file><file path="/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res/values-v21/values.xml" qualifiers="v21"><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file><file path="/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res/values-v18/values.xml" qualifiers="v18"><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file><file path="/Users/JSenen/.gradle/caches/transforms-4/c50b4c661099b4b752c70fed2a27d26a/transformed/core-1.5.0/res/values/values.xml" qualifiers=""><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTest$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/androidTest/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTest" generated-set="androidTest$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/androidTest/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTestDebug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/androidTestDebug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTestDebug" generated-set="androidTestDebug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/androidTestDebug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/generated/res/resValues/androidTest/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/generated/res/resValues/androidTest/debug"><file path="/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/build/generated/res/resValues/androidTest/debug/values/gradleResValues.xml" qualifiers=""><string name="ble_device_name_prefix" translatable="false">PROV_</string><string name="proof_of_possesion" translatable="false">AcupetAP</string><string name="wifi_base_url" translatable="false">192.168.4.1:80</string><string name="wifi_device_name_prefix" translatable="false">PROV_</string></file></source></dataSet><mergedItems/></merger>

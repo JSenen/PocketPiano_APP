@@ -1,0 +1,6 @@
+int string ble_device_name_prefix 0x7f010000
+int string proof_of_possesion 0x7f010001
+int string wifi_base_url 0x7f010002
+int string wifi_device_name_prefix 0x7f010003
+int style WhiteBackgroundDialogTheme 0x7f020000
+int style WhiteBackgroundTheme 0x7f020001

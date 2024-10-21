@@ -1,0 +1,330 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.espressif.wifi_provisioning"
+4    android:versionCode="21"
+5    android:versionName="2.2.1 " >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-feature
+11-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:5:5-7:35
+12        android:name="android.hardware.bluetooth_le"
+12-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:6:9-53
+13        android:required="true" />
+13-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:7:9-32
+14
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:9:5-65
+15-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:9:22-62
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:10:5-67
+16-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:10:22-64
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:11:5-79
+17-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:11:22-76
+18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+18-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:12:5-79
+18-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:12:22-76
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:13:5-76
+19-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:13:22-73
+20    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+20-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:14:5-76
+20-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:14:22-73
+21    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+21-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:15:5-81
+21-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:15:22-78
+22    <uses-permission android:name="android.permission.VIBRATE" />
+22-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:16:5-66
+22-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:16:22-63
+23    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+23-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:17:5-79
+23-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:17:22-76
+24    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+24-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:18:5-73
+24-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:18:22-70
+25    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+25-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:19:5-78
+25-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:19:22-75
+26    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+26-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:20:5-76
+26-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:20:22-73
+27    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+27-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:21:5-77
+27-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:21:22-74
+28    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+28-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:22:5-77
+28-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:22:22-74
+29    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+29-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:23:5-94
+29-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:23:22-91
+30    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+30-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:24:5-94
+30-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:24:22-91
+31    <uses-permission
+31-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:25:5-27:38
+32        android:name="android.permission.BLUETOOTH"
+32-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:26:9-52
+33        android:maxSdkVersion="30" />
+33-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:27:9-35
+34    <uses-permission
+34-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:28:5-30:38
+35        android:name="android.permission.BLUETOOTH_ADMIN"
+35-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:29:9-58
+36        android:maxSdkVersion="30" /> <!-- Request legacy Bluetooth permissions on older devices. -->
+36-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:30:9-35
+37    <uses-permission
+37-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:25:5-27:38
+38        android:name="android.permission.BLUETOOTH"
+38-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:26:9-52
+39        android:maxSdkVersion="30" />
+39-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:27:9-35
+40    <uses-permission
+40-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:28:5-30:38
+41        android:name="android.permission.BLUETOOTH_ADMIN"
+41-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:29:9-58
+42        android:maxSdkVersion="30" />
+42-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:30:9-35
+43
+44    <permission
+44-->[androidx.core:core:1.13.0] /Users/JSenen/.gradle/caches/transforms-4/59d070f11bb87fb01b81624ed1d90f84/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+45        android:name="com.espressif.wifi_provisioning.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+45-->[androidx.core:core:1.13.0] /Users/JSenen/.gradle/caches/transforms-4/59d070f11bb87fb01b81624ed1d90f84/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+46        android:protectionLevel="signature" />
+46-->[androidx.core:core:1.13.0] /Users/JSenen/.gradle/caches/transforms-4/59d070f11bb87fb01b81624ed1d90f84/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+47
+48    <uses-permission android:name="com.espressif.wifi_provisioning.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+48-->[androidx.core:core:1.13.0] /Users/JSenen/.gradle/caches/transforms-4/59d070f11bb87fb01b81624ed1d90f84/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+48-->[androidx.core:core:1.13.0] /Users/JSenen/.gradle/caches/transforms-4/59d070f11bb87fb01b81624ed1d90f84/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+49
+50    <application
+50-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:38:5-111:19
+51        android:allowBackup="true"
+51-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:39:9-35
+52        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+52-->[androidx.core:core:1.13.0] /Users/JSenen/.gradle/caches/transforms-4/59d070f11bb87fb01b81624ed1d90f84/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+53        android:debuggable="true"
+54        android:extractNativeLibs="false"
+55        android:icon="@mipmap/ic_launcher"
+55-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:40:9-43
+56        android:label="@string/app_name"
+56-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:41:9-41
+57        android:supportsRtl="true"
+57-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:42:9-35
+58        android:testOnly="true"
+59        android:theme="@style/AppTheme"
+59-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:43:9-40
+60        android:usesCleartextTraffic="true" >
+60-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:44:9-44
+61
+62        <!-- Declaración del servicio debe ir aquí -->
+63        <service
+63-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:47:9-50:40
+64            android:name="com.espressif.BluetoothLeService"
+64-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:48:13-60
+65            android:enabled="true"
+65-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:49:13-35
+66            android:exported="false" />
+66-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:50:13-37
+67
+68        <!-- Otras actividades y servicios pueden estar aquí -->
+69
+70        <activity
+70-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:54:9-56:40
+71            android:name="com.espressif.DeviceControlActivity"
+71-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:55:13-63
+72            android:exported="false" />
+72-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:56:13-37
+73        <activity
+73-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:57:9-66:20
+74            android:name="com.espressif.SplashScreen"
+74-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:58:13-54
+75            android:exported="true"
+75-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:59:13-36
+76            android:windowSoftInputMode="stateHidden|adjustResize" >
+76-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:60:13-67
+77            <intent-filter>
+77-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:61:13-65:29
+78                <action android:name="android.intent.action.MAIN" />
+78-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:62:17-69
+78-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:62:25-66
+79
+80                <category android:name="android.intent.category.LAUNCHER" />
+80-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:64:17-77
+80-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:64:27-74
+81            </intent-filter>
+82        </activity>
+83        <activity
+83-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:67:9-70:70
+84            android:name="com.espressif.ui.activities.EspMainActivity"
+84-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:68:13-71
+85            android:exported="true"
+85-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:69:13-36
+86            android:windowSoftInputMode="stateHidden|adjustResize" />
+86-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:70:13-67
+87        <activity
+87-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:71:9-74:70
+88            android:name="com.espressif.MainActivity"
+88-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:72:13-54
+89            android:exported="true"
+89-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:73:13-36
+90            android:windowSoftInputMode="stateHidden|adjustResize" />
+90-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:74:13-67
+91        <activity
+91-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:75:9-78:52
+92            android:name="com.espressif.ui.activities.AddDeviceActivity"
+92-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:76:13-73
+93            android:label="@string/title_activity_provision_landing"
+93-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:77:13-69
+94            android:screenOrientation="portrait" />
+94-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:78:13-49
+95        <activity
+95-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:79:9-82:52
+96            android:name="com.espressif.ui.activities.BLEProvisionLanding"
+96-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:80:13-75
+97            android:label="@string/title_activity_connect_device"
+97-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:81:13-66
+98            android:screenOrientation="portrait" />
+98-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:82:13-49
+99        <activity
+99-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:83:9-86:52
+100            android:name="com.espressif.ui.activities.WiFiConfigActivity"
+100-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:84:13-74
+101            android:label="@string/title_activity_wifi_config"
+101-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:85:13-63
+102            android:screenOrientation="portrait" />
+102-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:86:13-49
+103        <activity
+103-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:87:9-90:52
+104            android:name="com.espressif.ui.activities.ProvisionLanding"
+104-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:88:13-72
+105            android:label="@string/title_activity_provision_landing"
+105-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:89:13-69
+106            android:screenOrientation="portrait" />
+106-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:90:13-49
+107        <activity
+107-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:91:9-94:52
+108            android:name="com.espressif.ui.activities.ProvisionActivity"
+108-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:92:13-73
+109            android:label="@string/title_activity_provisioning"
+109-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:93:13-64
+110            android:screenOrientation="portrait" />
+110-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:94:13-49
+111        <activity
+111-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:95:9-98:52
+112            android:name="com.espressif.ui.activities.SettingsActivity"
+112-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:96:13-72
+113            android:label="@string/title_activity_settings"
+113-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:97:13-60
+114            android:screenOrientation="portrait" />
+114-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:98:13-49
+115        <activity
+115-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:99:9-102:52
+116            android:name="com.espressif.ui.activities.WiFiScanActivity"
+116-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:100:13-72
+117            android:label="@string/title_activity_wifi_scan_list"
+117-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:101:13-66
+118            android:screenOrientation="portrait" />
+118-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:102:13-49
+119        <activity
+119-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:103:9-106:52
+120            android:name="com.espressif.ui.activities.ThreadConfigActivity"
+120-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:104:13-76
+121            android:label="@string/title_activity_wifi_scan_list"
+121-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:105:13-66
+122            android:screenOrientation="portrait" />
+122-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:106:13-49
+123        <activity
+123-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:107:9-110:52
+124            android:name="com.espressif.ui.activities.ProofOfPossessionActivity"
+124-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:108:13-81
+125            android:label="@string/title_activity_pop"
+125-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:109:13-55
+126            android:screenOrientation="portrait" />
+126-->/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/AndroidManifest.xml:110:13-49
+127        <activity
+127-->[com.google.android.gms:play-services-base:18.5.0] /Users/JSenen/.gradle/caches/transforms-4/39813a2b47ddb7c8dbeeac4f35247746/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+128            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+128-->[com.google.android.gms:play-services-base:18.5.0] /Users/JSenen/.gradle/caches/transforms-4/39813a2b47ddb7c8dbeeac4f35247746/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+129            android:exported="false"
+129-->[com.google.android.gms:play-services-base:18.5.0] /Users/JSenen/.gradle/caches/transforms-4/39813a2b47ddb7c8dbeeac4f35247746/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+130            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+130-->[com.google.android.gms:play-services-base:18.5.0] /Users/JSenen/.gradle/caches/transforms-4/39813a2b47ddb7c8dbeeac4f35247746/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+131
+132        <meta-data
+132-->[com.google.android.gms:play-services-basement:18.4.0] /Users/JSenen/.gradle/caches/transforms-4/c0b48e1a34c21441cd5ff527f794092d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+133            android:name="com.google.android.gms.version"
+133-->[com.google.android.gms:play-services-basement:18.4.0] /Users/JSenen/.gradle/caches/transforms-4/c0b48e1a34c21441cd5ff527f794092d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+134            android:value="@integer/google_play_services_version" />
+134-->[com.google.android.gms:play-services-basement:18.4.0] /Users/JSenen/.gradle/caches/transforms-4/c0b48e1a34c21441cd5ff527f794092d/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+135
+136        <provider
+136-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+137            android:name="androidx.startup.InitializationProvider"
+137-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+138            android:authorities="com.espressif.wifi_provisioning.androidx-startup"
+138-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+139            android:exported="false" >
+139-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+140            <meta-data
+140-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+141                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+141-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+142                android:value="androidx.startup" />
+142-->[androidx.emoji2:emoji2:1.2.0] /Users/JSenen/.gradle/caches/transforms-4/1bbb6896ebc72e7ac02be1c19023ffd1/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+143            <meta-data
+143-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/JSenen/.gradle/caches/transforms-4/697701b47633fef3a709cca60e923de9/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+144                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+144-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/JSenen/.gradle/caches/transforms-4/697701b47633fef3a709cca60e923de9/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+145                android:value="androidx.startup" />
+145-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/JSenen/.gradle/caches/transforms-4/697701b47633fef3a709cca60e923de9/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+146            <meta-data
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+147                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+147-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+148                android:value="androidx.startup" />
+148-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+149        </provider>
+150
+151        <receiver
+151-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+152            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+153            android:directBootAware="false"
+153-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+154            android:enabled="true"
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+155            android:exported="true"
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+156            android:permission="android.permission.DUMP" >
+156-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+157            <intent-filter>
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+158                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+158-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+159            </intent-filter>
+160            <intent-filter>
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+161                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+162            </intent-filter>
+163            <intent-filter>
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+164                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+165            </intent-filter>
+166            <intent-filter>
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+167                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/JSenen/.gradle/caches/transforms-4/1ae2f0befebe0a5fd9359b5813aac147/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+168            </intent-filter>
+169        </receiver>
+170    </application>
+171
+172</manifest>

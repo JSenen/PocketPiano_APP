@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:keepScreenOn="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/AppTheme.Toolbar" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_address"
+            android:textSize="14sp"/>
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/device_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_protR"
+            android:textSize="14sp"/>
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/prot_recep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="14sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_protS"
+            android:textSize="14sp"/>
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/prot_sent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+
+        <Button
+            android:id="@+id/button_readlevel"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendReadLevel"
+            android:text="Read levels"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/button_writelevel"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendWriteLevel"
+            android:text="Write levels"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/button_readoffset"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendReadOffset"
+            android:text="Read Offset"
+            android:textSize="12dp" />
+        <Button
+            android:id="@+id/button_writeoffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write Offset"
+            android:textSize="12dp"
+            android:onClick="sendWriteOffset" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.groot.rang.MainActivity">
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#969696"
+            android:layout_margin="2dp">
+
+            <GridLayout
+                android:id="@+id/GridLev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="10"
+                android:rowCount="4"
+                android:background="#969696"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textPPPL"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="Max" />
+
+                <TextView
+                    android:id="@+id/textPPPH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="PPP" />
+
+                <TextView
+                    android:id="@+id/textPPH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="PP" />
+
+                <TextView
+                    android:id="@+id/textPH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="P" />
+
+                <TextView
+                    android:id="@+id/textMPH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="MP" />
+
+                <TextView
+                    android:id="@+id/textMFH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="MF" />
+
+                <TextView
+                    android:id="@+id/textFH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="F" />
+
+                <TextView
+                    android:id="@+id/textFFH"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="FF" />
+
+                <TextView
+                    android:id="@+id/textFFFH"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="#d2d2d2"
+                    android:gravity="center"
+                    android:text="FFF" />
+
+                <TextView
+                    android:id="@+id/textMidi"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="MIDI" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/text42"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="41" />
+
+                <TextView
+                    android:id="@+id/text55"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="54" />
+
+                <TextView
+                    android:id="@+id/text68"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="67" />
+
+                <TextView
+                    android:id="@+id/text80"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="79" />
+
+                <TextView
+                    android:id="@+id/text93"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="92" />
+
+                <TextView
+                    android:id="@+id/text107"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="106" />
+
+                <TextView
+                    android:id="@+id/text120"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="119" />
+
+                <TextView
+                    android:id="@+id/text127"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="127" />
+
+                <TextView
+                    android:id="@+id/textMs"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="White ms x 10" />
+
+                <EditText
+                    android:id="@+id/textPPPLow"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textPPPHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textPPHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textPHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textMPHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textMFHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textFHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textFFHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textFFFHigh"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textMsB"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#d2d2d2"
+                    android:text="Black ms x 10" />
+
+                <EditText
+                    android:id="@+id/textPPPLowB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textPPPHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textPPHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textPHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textMPHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textMFHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textFHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textFFHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textFFFHighB"
+                    android:inputType="number"
+                    android:layout_margin="2dp"
+                    android:textSize="12dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+            </GridLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="z"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+
+            <RadioButton
+                android:id="@+id/radio_octave1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="1"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+
+            <RadioButton
+                android:id="@+id/radio_octave2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="2"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton
+                android:id="@+id/radio_octave3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="3"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton
+                android:id="@+id/radio_octave4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="4"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton
+                android:id="@+id/radio_octave5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="5"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton
+                android:id="@+id/radio_octave6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="6"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton
+                android:id="@+id/radio_octave7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_radio_button"
+                android:text="7"
+                android:onClick="onRadioButtonClicked"
+                android:textColor="@color/colorPrimary"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soft version:"
+            android:textSize="14sp"/>
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/softver_recep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serial number:"
+            android:textSize="14sp"/>
+        <Space android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/serialnumb_recep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.groot.rang.MainActivity">
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#969696"
+            android:layout_margin="2dp">
+
+            <GridLayout
+                android:id="@+id/GridOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="13"
+                android:layout_gravity="left"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/textKey"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="KEY" />
+
+                <TextView
+                    android:id="@+id/textLast"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="Last Time (ms x 10)" />
+
+                <TextView
+                    android:id="@+id/textOffset"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="Offset (ms x 10)" />
+
+                <TextView
+                    android:id="@+id/textKey1"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/textKey1Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey1Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey2"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/textKey2Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey2Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey3"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/textKey3Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey3Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey4"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/textKey4Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey4Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey5"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/textKey5Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey5Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey6"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="6" />
+
+                <TextView
+                    android:id="@+id/textKey6Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey6Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey7"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="7" />
+
+                <TextView
+                    android:id="@+id/textKey7Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey7Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey8"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="8" />
+
+                <TextView
+                    android:id="@+id/textKey8Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey8Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey9"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="9" />
+
+                <TextView
+                    android:id="@+id/textKey9Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey9Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey10"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="10" />
+
+                <TextView
+                    android:id="@+id/textKey10Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey10Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey11"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="11" />
+
+                <TextView
+                    android:id="@+id/textKey11Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey11Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textKey12"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="#ffffff"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/textKey12Val"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/textKey12Off"
+                    android:inputType="number|numberSigned"
+                    android:layout_margin="2dp"
+                    android:width="72dp"
+                    android:gravity="center"
+                    android:text="" />
+            </GridLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
