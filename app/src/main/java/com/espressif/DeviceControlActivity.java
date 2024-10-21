@@ -55,7 +55,7 @@ import java.util.UUID;
 public class DeviceControlActivity extends AppCompatActivity {
     private final static String TAG = DeviceControlActivity.class.getSimpleName();
 
-    public static final String EXTRAS_DEVICE_NAME = "DEVICE_NAME";
+    public static String EXTRAS_DEVICE_NAME = "DEVICE_NAME";
     public static String EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS";
     public static final String TAGACTIVITY = "DEVICECONTROL";
 
@@ -287,18 +287,20 @@ public class DeviceControlActivity extends AppCompatActivity {
         // Recuperar la dirección del dispositivo BLE desde el Intent
         Intent intent = getIntent();
         mDeviceAddress = intent.getStringExtra("device");
+        mDeviceName = intent.getStringExtra("deviceName");
         //mDeviceName = intent.getStringExtra("deviceName");
 
         Log.i(TAG,"DeviceControl ONCREATE");
         EXTRAS_DEVICE_ADDRESS = mDeviceAddress;
-        //final Intent intent = getIntent();
-        //mDeviceName = intent.getStringExtra(EXTRAS_DEVICE_NAME);
-        //mDeviceAddress = intent.getStringExtra(EXTRAS_DEVICE_ADDRESS);
+        EXTRAS_DEVICE_NAME = mDeviceName;
 
         // Sets up UI references.
-        ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
+        TextView deviceAddressTextView = (TextView) findViewById(R.id.device_address);
+        deviceAddressTextView.setText(mDeviceName);
 
-        ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
+        Log.i(TAGACTIVITY, "Device Adress: " + mDeviceAddress);
+        Log.i(TAGACTIVITY, "Device Name: " + mDeviceName);
+        //((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
 
         mProt_recep = (TextView) findViewById(R.id.prot_recep);
         mProt_sent = (TextView) findViewById(R.id.prot_sent);
@@ -355,13 +357,13 @@ public class DeviceControlActivity extends AppCompatActivity {
         mGridLev = (GridLayout) findViewById(R.id.GridLev);
         mGridOff = (GridLayout) findViewById(R.id.GridOff);
 
-        RadioButton radioz = (RadioButton) findViewById(R.id.radio_z);
-        RadioButton radioOctave1 = (RadioButton) findViewById(R.id.radio_octave1);
-        RadioButton radioOctave2 = (RadioButton) findViewById(R.id.radio_octave2);
-        RadioButton radioOctave3 = (RadioButton) findViewById(R.id.radio_octave3);
-        RadioButton radioOctave4 = (RadioButton) findViewById(R.id.radio_octave4);
-        RadioButton radioOctave5 = (RadioButton) findViewById(R.id.radio_octave5);
-        RadioButton radioOctave6 = (RadioButton) findViewById(R.id.radio_octave6);
+//        RadioButton radioz = (RadioButton) findViewById(R.id.radio_z);
+//        RadioButton radioOctave1 = (RadioButton) findViewById(R.id.radio_octave1);
+//        RadioButton radioOctave2 = (RadioButton) findViewById(R.id.radio_octave2);
+//        RadioButton radioOctave3 = (RadioButton) findViewById(R.id.radio_octave3);
+//        RadioButton radioOctave4 = (RadioButton) findViewById(R.id.radio_octave4);
+//        RadioButton radioOctave5 = (RadioButton) findViewById(R.id.radio_octave5);
+//        RadioButton radioOctave6 = (RadioButton) findViewById(R.id.radio_octave6);
 
 
 //        mConnectionState = (TextView) findViewById(R.id.connection_state);

@@ -58,6 +58,7 @@ public class DevicesFragment extends ListFragment {
     private final BroadcastReceiver discoveryBroadcastReceiver;
     private final IntentFilter discoveryIntentFilter;
     private String optionClicked;
+    private String DeviceSelectedName;
 
     private Menu menu;
     private BluetoothAdapter bluetoothAdapter;
@@ -180,7 +181,8 @@ public class DevicesFragment extends ListFragment {
                 for (BluetoothUtil.Device device : listItems) {
                     String deviceName = device.getName();
                    // if (deviceName != null && !deviceName.isEmpty()) {
-                    if (deviceName != null /*&& deviceName.contains("PocketPiano")*/) {
+                    if (deviceName != null && deviceName.contains("PocketPiano")) {
+                        DeviceSelectedName = deviceName;
                         if (count == position) {
                             return device;
                         }
@@ -411,7 +413,7 @@ public class DevicesFragment extends ListFragment {
             // Navegar a la Activity de Control y pasar la dirección del dispositivo BLE
             Intent intent = new Intent(getActivity(), DeviceControlActivity.class);
             intent.putExtra("device", device.getDevice().getAddress());
-            //intent.putExtra("deviceName",device.getDevice().getName());
+            intent.putExtra("deviceName", device.getDevice().getName());
             startActivity(intent);
         }
 
