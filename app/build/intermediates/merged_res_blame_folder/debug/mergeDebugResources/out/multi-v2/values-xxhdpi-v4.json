@@ -4,13 +4,13 @@
             "outputFile": "com.espressif.wifi_provisioning.app-mergeDebugResources-34:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/JSenen/Downloads/HUB_PocketPiano_OTA-main/app/src/main/res/values-xxhdpi/dimens.xml",
+                    "source": "C:\\Users\\Taller\\AndroidStudioProjects\\PocketPIano_APP\\app\\src\\main\\res\\values-xxhdpi\\dimens.xml",
                     "from": {
                         "startLines": "7,5,2,3,4,1,6",
                         "startColumns": "1,1,1,1,1,1,1",
-                        "startOffsets": "249,171,53,93,133,13,211",
+                        "startOffsets": "256,176,55,96,137,14,217",
                         "endColumns": "38,39,39,39,37,39,37",
-                        "endOffsets": "286,209,91,131,169,51,247"
+                        "endOffsets": "293,214,93,134,173,52,253"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8",

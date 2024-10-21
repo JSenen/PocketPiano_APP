@@ -4,7 +4,7 @@
             "outputFile": "com.espressif.wifi_provisioning.app-mergeDebugResources-34:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/JSenen/.gradle/caches/transforms-4/d64fad162696b385c5ec0df8074a111b/transformed/preference-1.1.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\Taller\\.gradle\\caches\\transforms-4\\d64fad162696b385c5ec0df8074a111b\\transformed\\preference-1.1.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
