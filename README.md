@@ -24,7 +24,7 @@ Se utiliza el protocolo con el siguiente **diagrama de secuencia**:
 
 Para las distitnas configuraciones en los tiempos de teclas del piano, se utiliza la siguiente secuencia
 
-![Imagen](https://github.com/JSenen/HUB_PocketPiano_OTA/blob/fix/doc/Piano_OTA_Screen.png)
+![Imagen](https://github.com/JSenen/HUB_PocketPiano_OTA/blob/fix/doc/Piano_Control_Screen.png)
 
 ## Comunicación con Dispositivo BLE
 
