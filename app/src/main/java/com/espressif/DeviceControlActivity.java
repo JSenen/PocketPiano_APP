@@ -268,8 +268,7 @@ public class DeviceControlActivity extends AppCompatActivity {
             };
 
     private void clearUI() {
-//        mGattServicesList.setAdapter((SimpleExpandableListAdapter) null);
-        //       mDataField.setText(R.string.no_data);
+
     }
 
     @Override
@@ -357,23 +356,10 @@ public class DeviceControlActivity extends AppCompatActivity {
         mGridLev = (GridLayout) findViewById(R.id.GridLev);
         mGridOff = (GridLayout) findViewById(R.id.GridOff);
 
-//        RadioButton radioz = (RadioButton) findViewById(R.id.radio_z);
-//        RadioButton radioOctave1 = (RadioButton) findViewById(R.id.radio_octave1);
-//        RadioButton radioOctave2 = (RadioButton) findViewById(R.id.radio_octave2);
-//        RadioButton radioOctave3 = (RadioButton) findViewById(R.id.radio_octave3);
-//        RadioButton radioOctave4 = (RadioButton) findViewById(R.id.radio_octave4);
-//        RadioButton radioOctave5 = (RadioButton) findViewById(R.id.radio_octave5);
-//        RadioButton radioOctave6 = (RadioButton) findViewById(R.id.radio_octave6);
-
-
-//        mConnectionState = (TextView) findViewById(R.id.connection_state);
-//        getActionBar().setTitle(mDeviceName);
-//         getActionBar().setDisplayHomeAsUpEnabled(true);
         // Vincular el servicio BLE
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
     }
-
 
 
     @Override

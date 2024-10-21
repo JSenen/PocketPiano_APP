@@ -29,7 +29,7 @@ android {
     applicationVariants.all { variant ->
         variant.outputs.all {
             // Aquí puedes especificar el nombre personalizado para el archivo APK
-            outputFileName = "POCKETPIANO_OTA_v1.apk"
+            outputFileName = "POCKETPIANO_v2.apk"
         }
     }
 
