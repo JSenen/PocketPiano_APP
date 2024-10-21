@@ -53,7 +53,7 @@ public class SplashScreen extends AppCompatActivity {
 
         txtVersion = findViewById(R.id.txt_version);
 
-        String version = "1.0.0";
+        String version = "1.1.0";
         txtVersion.setText(version);
 
         provisionManager = ESPProvisionManager.getInstance(getApplicationContext());  // Inicializa ESPProvisionManager
