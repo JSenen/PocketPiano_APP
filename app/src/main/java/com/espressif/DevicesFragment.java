@@ -195,7 +195,7 @@ public class DevicesFragment extends ListFragment {
         setListAdapter(null);
         View header = getActivity().getLayoutInflater().inflate(R.layout.device_list_header, null, false);
         getListView().addHeaderView(header, null, false);
-        setEmptyText("initializing...");
+        setEmptyText("Inicializando...");
         ((TextView) getListView().getEmptyView()).setTextSize(48);
         ((TextView) getListView().getEmptyView()).setTextColor(Color.parseColor("#414141"));
 
@@ -308,7 +308,7 @@ public class DevicesFragment extends ListFragment {
         scanState = nextScanState;
         listItems.clear();
         listAdapter.notifyDataSetChanged();
-        setEmptyText("<scanning...>");
+        setEmptyText("<escaneando...>");
         menu.findItem(R.id.ble_scan).setVisible(false);
         menu.findItem(R.id.ble_scan_stop).setVisible(true);
 
@@ -339,7 +339,7 @@ public class DevicesFragment extends ListFragment {
     private void stopScan() {
         if (scanState == ScanState.NONE)
             return;
-        setEmptyText("<no bluetooth devices found>");
+        setEmptyText("<no se encontraron dispositivos Bluetooth>");
         if (menu != null) {
             menu.findItem(R.id.ble_scan).setVisible(true);
             menu.findItem(R.id.ble_scan_stop).setVisible(false);
@@ -382,7 +382,7 @@ public class DevicesFragment extends ListFragment {
         @Override
         public void onScanFailed(int errorCode) {
             Log.e("BLE", "Scan failed with error: " + errorCode);
-            getActivity().runOnUiThread(() -> setEmptyText("<scan failed>"));
+            getActivity().runOnUiThread(() -> setEmptyText("<error al escanear>"));
         }
     };
 

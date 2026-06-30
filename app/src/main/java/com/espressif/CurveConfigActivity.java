@@ -356,7 +356,7 @@ public class CurveConfigActivity extends AppCompatActivity {
         if (group instanceof JSONArray) {
             JSONArray array = (JSONArray) group;
             if (array.length() != VALUE_COUNT) {
-                throw new JSONException(longKey + " must contain 9 values");
+                throw new JSONException(longKey + " debe contener 9 valores");
             }
             for (int level = 0; level < VALUE_COUNT; level++) {
                 values[keyType][level] = parseValue(array.getInt(level));
@@ -407,7 +407,7 @@ public class CurveConfigActivity extends AppCompatActivity {
             int keyType = ("black".equals(key) || "b".equals(key)) ? 1 : 0;
             String[] items = value.split("[,;]");
             if (items.length != VALUE_COUNT) {
-                throw new IllegalArgumentException(parts[0].trim() + " must contain 9 values");
+                throw new IllegalArgumentException(parts[0].trim() + " debe contener 9 valores");
             }
             for (int level = 0; level < VALUE_COUNT; level++) {
                 values[keyType][level] = parseValue(Integer.parseInt(items[level].trim()));
@@ -426,13 +426,13 @@ public class CurveConfigActivity extends AppCompatActivity {
             }
         }
 
-        throw new IllegalArgumentException("Unknown config key: " + parts[0].trim());
+        throw new IllegalArgumentException("Clave de configuración desconocida: " + parts[0].trim());
     }
 
     private void parseCsvLine(int[][] values, String line) {
         String[] parts = line.split("[,;]");
         if (parts.length != 3) {
-            throw new IllegalArgumentException("Invalid line: " + line);
+            throw new IllegalArgumentException("Línea no válida: " + line);
         }
 
         int keyType = parseKeyType(parts[0].trim());
@@ -449,7 +449,7 @@ public class CurveConfigActivity extends AppCompatActivity {
         if ("black".equals(normalized) || "b".equals(normalized) || "1".equals(normalized)) {
             return 1;
         }
-        throw new IllegalArgumentException("Invalid key type: " + value);
+        throw new IllegalArgumentException("Tipo de tecla no válido: " + value);
     }
 
     private int parseLevel(String value) {
@@ -459,12 +459,12 @@ public class CurveConfigActivity extends AppCompatActivity {
                 return level;
             }
         }
-        throw new IllegalArgumentException("Invalid level: " + value);
+        throw new IllegalArgumentException("Nivel no válido: " + value);
     }
 
     private int parseValue(int value) {
         if (value < 0 || value > 0xFFFF) {
-            throw new IllegalArgumentException("Values must be between 0 and 65535");
+            throw new IllegalArgumentException("Los valores deben estar entre 0 y 65535");
         }
         return value;
     }
@@ -483,8 +483,8 @@ public class CurveConfigActivity extends AppCompatActivity {
         for (int keyType = 0; keyType < 2; keyType++) {
             for (int level = 0; level < VALUE_COUNT; level++) {
                 if (values[keyType][level] < 0) {
-                    String color = keyType == 0 ? "white" : "black";
-                    throw new IllegalArgumentException("Missing " + color + " value for " + LEVEL_KEYS[level]);
+                    String color = keyType == 0 ? "blancas" : "negras";
+                    throw new IllegalArgumentException("Falta el valor de teclas " + color + " para " + LEVEL_KEYS[level]);
                 }
             }
         }
@@ -495,7 +495,7 @@ public class CurveConfigActivity extends AppCompatActivity {
     }
 
     private String buildSummary(int[][] values) {
-        return "White: " + joinValues(values[0]) + "\nBlack: " + joinValues(values[1]);
+        return "Blancas: " + joinValues(values[0]) + "\nNegras: " + joinValues(values[1]);
     }
 
     private String joinValues(int[] values) {

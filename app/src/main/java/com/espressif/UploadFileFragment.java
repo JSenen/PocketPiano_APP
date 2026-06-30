@@ -164,7 +164,7 @@ public class UploadFileFragment extends Fragment {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        startActivityForResult(Intent.createChooser(intent, "Select OTA File"), REQUEST_CODE_SELECT_FILE);
+        startActivityForResult(Intent.createChooser(intent, "Seleccionar archivo OTA"), REQUEST_CODE_SELECT_FILE);
     }
 
     @Override
@@ -177,7 +177,7 @@ public class UploadFileFragment extends Fragment {
                     String fileName = getFileName(fileUri);
                     responseText.setText(fileName);
                     buttonStartOTA.setVisibility(View.GONE);
-                    connectionStatus.setText("Updating, please wait...");
+                    connectionStatus.setText("Actualizando, espera por favor...");
                     connectionStatusIcon.setVisibility(View.GONE);
                     progressBar.setVisibility(View.VISIBLE);
                     progressText.setVisibility(View.VISIBLE);
@@ -201,15 +201,15 @@ public class UploadFileFragment extends Fragment {
                                 initializeOtaClient(); // Mueve aquí la inicialización del cliente OTA
                             } else {
                                 Log.e(TAG, "binFile is empty");
-                                Toast.makeText(getContext(), "Failed to create valid binFile", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "No se pudo crear un archivo bin válido", Toast.LENGTH_SHORT).show();
                             }
                         } else {
                             Log.e(TAG, "Failed to create binFile");
-                            Toast.makeText(getContext(), "Failed to create binFile", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "No se pudo crear el archivo bin", Toast.LENGTH_SHORT).show();
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
-                        Toast.makeText(getContext(), "Error reading the file", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Error al leer el archivo", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

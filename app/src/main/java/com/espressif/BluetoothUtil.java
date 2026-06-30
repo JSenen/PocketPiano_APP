@@ -74,8 +74,8 @@ public class BluetoothUtil {
         final AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getActivity());
         builder.setTitle(fragment.getString(R.string.bluetooth_permission_title));
         builder.setMessage(fragment.getString(R.string.bluetooth_permission_grant));
-        builder.setNegativeButton("Cancel", null);
-        builder.setPositiveButton("Continue", listener);
+        builder.setNegativeButton("Cancelar", null);
+        builder.setPositiveButton("Continuar", listener);
         builder.show();
     }
 
@@ -84,8 +84,8 @@ public class BluetoothUtil {
         final AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getActivity());
         builder.setTitle(fragment.getString(R.string.bluetooth_permission_title));
         builder.setMessage(String.format(fragment.getString(R.string.bluetooth_permission_denied), s));
-        builder.setNegativeButton("Cancel", null);
-        builder.setPositiveButton("Settings", (dialog, which) ->
+        builder.setNegativeButton("Cancelar", null);
+        builder.setPositiveButton("Ajustes", (dialog, which) ->
                 fragment.startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
                         Uri.parse("package:" + BuildConfig.APPLICATION_ID))));
         builder.show();

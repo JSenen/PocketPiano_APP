@@ -3,20 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/ble_scan"
-        android:title="Scan"
+        android:title="Escanear"
         app:showAsAction="always"
         app:titleTextAppearance="@style/MyMenuTextStyle" />/>
     <item
         android:id="@+id/ble_scan_stop"
-        android:title="STOP"
+        android:title="PARAR"
         app:showAsAction="always"
         android:visible="false" />
     <item
         android:id="@+id/bt_settings"
-        android:title="Bluetooth settings" />
+        android:title="Ajustes de Bluetooth" />
     <item
         android:id="@+id/bt_back"
         android:icon="?attr/actionModeCloseDrawable"
-        android:title="Back"
+        android:title="Volver"
         app:showAsAction="always" />
 </menu>
