@@ -17,7 +17,7 @@
     <!-- Estilo colores textos toolbar -->
     <style name="AppTheme.Toolbar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/white</item> <!-- Color del texto del título -->
-        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">sans</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />

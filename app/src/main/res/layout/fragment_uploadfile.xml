@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="@string/disconnected_from_device"
             android:textSize="20sp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="sans"
             android:textColor="#414141"/>
     </LinearLayout>
 
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/connectionStatusLayout"
-        android:fontFamily="@font/roboto"
+        android:fontFamily="sans"
         android:textColor="#414141"/>
 
     <Button
@@ -56,7 +56,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="240dp"
         android:backgroundTint="@color/buttonBackgroundColor"
-        android:fontFamily="@font/roboto"
+        android:fontFamily="sans"
         android:text="@string/select_file"
         android:textColor="@color/buttonTextColor"
         android:textSize="20dp"
@@ -93,7 +93,7 @@
         android:text="0%"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:fontFamily="@font/roboto"
+        android:fontFamily="sans"
         android:visibility="gone"/>
 
         <ImageView
