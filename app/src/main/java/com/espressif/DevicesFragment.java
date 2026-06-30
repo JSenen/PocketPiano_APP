@@ -12,7 +12,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.LocationManager;
@@ -35,7 +34,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
 
 import com.espressif.wifi_provisioning.R;
@@ -57,7 +55,6 @@ public class DevicesFragment extends ListFragment {
     private final Runnable leScanStopCallback;
     private final BroadcastReceiver discoveryBroadcastReceiver;
     private final IntentFilter discoveryIntentFilter;
-    private String optionClicked;
     private String DeviceSelectedName;
 
     private Menu menu;
@@ -118,10 +115,6 @@ public class DevicesFragment extends ListFragment {
         if (getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
             bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         }
-
-        //Recovery SharedPreferences option clicked in SplashScreen
-        SharedPreferences sharedPref = getActivity().getSharedPreferences("OptionClicked",Context.MODE_PRIVATE);
-        optionClicked = sharedPref.getString("OptionClicked", null); //Recovery value
 
         listAdapter = new ArrayAdapter<BluetoothUtil.Device>(getActivity(), 0, listItems) {
             @NonNull
@@ -398,24 +391,14 @@ public class DevicesFragment extends ListFragment {
     @Override
     public void onListItemClick(@NonNull ListView l, @NonNull View v, int position, long id) {
         stopScan();
-        BluetoothUtil.Device device = listItems.get(position-1);
-        Bundle args = new Bundle();
-        args.putString("device", device.getDevice().getAddress());
-//        Fragment fragment = new TerminalFragment();
-//        fragment.setArguments(args);
-//        getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "terminal").addToBackStack(null).commit();
-
-        if (optionClicked !=null && optionClicked.equals("ota")){
-            Fragment fragment = new UploadFileFragment();
-            fragment.setArguments(args);
-            getFragmentManager().beginTransaction().replace(R.id.fragment, fragment, "temperature").addToBackStack(null).commit();
-        } else if (optionClicked != null && optionClicked.equals("control")) {
-            // Navegar a la Activity de Control y pasar la dirección del dispositivo BLE
-            Intent intent = new Intent(getActivity(), DeviceControlActivity.class);
-            intent.putExtra("device", device.getDevice().getAddress());
-            intent.putExtra("deviceName", device.getDevice().getName());
-            startActivity(intent);
+        BluetoothUtil.Device device = listAdapter.getItem(position - getListView().getHeaderViewsCount());
+        if (device == null) {
+            return;
         }
 
+        Intent intent = new Intent(getActivity(), CurveConfigActivity.class);
+        intent.putExtra("device", device.getDevice().getAddress());
+        intent.putExtra("deviceName", device.getDevice().getName());
+        startActivity(intent);
     }
 }

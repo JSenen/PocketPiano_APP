@@ -52,6 +52,9 @@
         <!-- Otras actividades y servicios pueden estar aquí -->
 
         <activity
+            android:name="com.espressif.CurveConfigActivity"
+            android:exported="false" />
+        <activity
             android:name="com.espressif.DeviceControlActivity"
             android:exported="false" />
         <activity

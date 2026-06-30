@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PocketPiano</string>
+    <string name="app_name">PocketPiano Curves</string>
     <string name="devices">Bluetooth BLE Devices</string>
 
     <string name="bluetooth_permission_title">Bluetooth permission</string>
@@ -25,6 +25,18 @@
     <string name="use_scan_to_refresh_devices"><![CDATA[Use scan to refresh devices]]></string>
     <string name="bluetooth_le_not_supported"><![CDATA[Bluetooth LE not supported]]></string>
     <string name="bluetooth_is_disabled"><![CDATA[Bluetooth is disabled]]></string>
+    <string name="curve_config_short">CONFIG</string>
+    <string name="curve_config_title">Curve configuration</string>
+    <string name="curve_select_file">Select config file</string>
+    <string name="curve_send">Send curve values</string>
+    <string name="curve_no_file">No config file selected</string>
+    <string name="curve_file_loaded">Config file loaded</string>
+    <string name="curve_file_invalid">Invalid config file</string>
+    <string name="curve_not_ready">Connect and select a valid file first</string>
+    <string name="curve_discovering">Discovering BLE service...</string>
+    <string name="curve_sending">Sending curve values...</string>
+    <string name="curve_sent">Curve values sent</string>
+    <string name="curve_format_hint">Accepted formats:\n{\"white\":[...9 values...],\"black\":[...9 values...]}\nwhite=1,2,3,4,5,6,7,8,9\nblack=1,2,3,4,5,6,7,8,9\nwhite,PPPLow,120</string>
 
     <!--  <string name="app_name">ESP Provisioning</string>
     <string name="app_name_ble">ESP BLE Prov</string>
